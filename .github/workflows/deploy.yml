@@ -1,0 +1,31 @@
+name: Deploy Docusaurus to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+        working-directory: frontend/
+      - name: Build Docusaurus website
+        run: npm run build
+        working-directory: frontend/
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: frontend/build
+          # cname: example.com # Uncomment if you have a custom domain

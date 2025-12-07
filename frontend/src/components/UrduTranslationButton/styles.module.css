@@ -1,0 +1,12 @@
+.translationButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between flag and text */
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.buttonText {
+  /* No specific styles needed here unless different from default button text */
+}
+
+/* You might want to adjust button size or positioning when integrating */

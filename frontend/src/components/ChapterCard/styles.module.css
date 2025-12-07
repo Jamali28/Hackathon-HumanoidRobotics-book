@@ -1,0 +1,76 @@
+.chapterCard {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid var(--ifm-toc-border-color); /* Adjust as needed */
+  border-radius: var(--ifm-card-border-radius);
+  overflow: hidden;
+  box-shadow: var(--ifm-color-shadow-regular);
+  transition: transform 0.2s ease-in-out;
+}
+
+.chapterCard:hover {
+  transform: translateY(-5px);
+}
+
+.chapterCardTitle {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ifm-color-primary); /* Use Docusaurus primary color */
+}
+
+.card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--ifm-toc-border-color);
+}
+
+.difficultyBadge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--ifm-border-radius);
+  color: white;
+  text-transform: capitalize;
+}
+
+.difficultyEasy {
+  background-color: var(--ifm-color-success);
+}
+
+.difficultyMedium {
+  background-color: var(--ifm-color-warning);
+}
+
+.difficultyHard {
+  background-color: var(--ifm-color-danger);
+}
+
+.progressBarContainer {
+  width: 100%;
+  background-color: var(--ifm-color-secondary-light); /* Light gray for background */
+  border-radius: var(--ifm-border-radius);
+  height: 10px;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: var(--ifm-color-primary); /* Use Docusaurus primary color */
+  border-radius: var(--ifm-border-radius);
+  transition: width 0.3s ease-in-out;
+}
+
+.progressText {
+  position: absolute;
+  right: 0.5rem;
+  top: -1.5rem; /* Position above the bar */
+  font-size: 0.75rem;
+  color: var(--ifm-font-color-secondary);
+}
+
+.exploreButton {
+  margin-top: 1rem;
+}

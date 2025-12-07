@@ -1,0 +1,90 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Physical AI & Humanoid Robotics Textbook RAG API",
+    "version": "1.0.0",
+    "description": "An API for querying the RAG system for the Physical AI & Humanoid Robotics textbook."
+  },
+  "paths": {
+    "/api/v1/query": {
+      "post": {
+        "summary": "Query the RAG system",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/QueryRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "QueryRequest": {
+        "type": "object",
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "The user's query."
+          }
+        },
+        "required": ["query"]
+      },
+      "QueryResponse": {
+        "type": "object",
+        "properties": {
+          "answer": {
+            "type": "string",
+            "description": "The generated answer from the RAG system."
+          },
+          "sources": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Source"
+            }
+          }
+        }
+      },
+      "Source": {
+        "type": "object",
+        "properties": {
+          "chunk_id": {
+            "type": "string",
+            "description": "The ID of the source chunk."
+          },
+          "content": {
+            "type": "string",
+            "description": "The text content of the source chunk."
+          },
+          "metadata": {
+            "type": "object",
+            "properties": {
+              "source_path": {
+                "type": "string"
+              },
+              "title": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

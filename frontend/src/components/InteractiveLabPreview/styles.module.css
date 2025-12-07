@@ -1,0 +1,18 @@
+.labPreviewSection {
+  background-color: var(--ifm-background-color);
+  padding: 2rem 0;
+  border-top: 1px solid var(--ifm-toc-border-color);
+}
+
+.placeholderBox {
+  background-color: var(--ifm-color-secondary-lighter);
+  border: 2px dashed var(--ifm-color-secondary-dark);
+  padding: 3rem;
+  margin-top: 2rem;
+  border-radius: var(--ifm-border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}

@@ -7,38 +7,32 @@
 
 ## Summary
 
-[Extract from feature spec: primary requirement + technical approach from research]
+This plan outlines the implementation of a unified, spec-driven Docusaurus textbook and RAG chatbot system. The project will be developed in phases, starting with project setup and content generation for the Docusaurus site. Subsequent phases will focus on UI customization, building the RAG backend with FastAPI, Qdrant, and Neon Postgres, and integrating a chatbot frontend. The final phase will cover deployment to GitHub Pages and the backend server.
 
 ## Technical Context
 
-<!--
-  ACTION REQUIRED: Replace the content in this section with the technical details
-  for the project. The structure here is presented in advisory capacity to guide
-  the iteration process.
--->
-
-**Language/Version**: [e.g., Python 3.11, Swift 5.9, Rust 1.75 or NEEDS CLARIFICATION]  
-**Primary Dependencies**: [e.g., FastAPI, UIKit, LLVM or NEEDS CLARIFICATION]  
-**Storage**: [if applicable, e.g., PostgreSQL, CoreData, files or N/A]  
-**Testing**: [e.g., pytest, XCTest, cargo test or NEEDS CLARIFICATION]  
-**Target Platform**: [e.g., Linux server, iOS 15+, WASM or NEEDS CLARIFICATION]
-**Project Type**: [single/web/mobile - determines source structure]  
-**Performance Goals**: [domain-specific, e.g., 1000 req/s, 10k lines/sec, 60 fps or NEEDS CLARIFICATION]  
-**Constraints**: [domain-specific, e.g., <200ms p95, <100MB memory, offline-capable or NEEDS CLARIFICATION]  
-**Scale/Scope**: [domain-specific, e.g., 10k users, 1M LOC, 50 screens or NEEDS CLARIFICATION]
+**Language/Version**: JavaScript (ES2021+), TypeScript (5.0+), Python (3.11+)
+**Primary Dependencies**: Docusaurus, React, FastAPI, Qdrant-client, psycopg2-binary, OpenAI API
+**Storage**: Markdown files, Qdrant Cloud (vector storage), Neon Postgres (metadata)
+**Testing**: Jest (frontend), Pytest (backend)
+**Target Platform**: Web (Docusaurus on GitHub Pages), Linux Server (FastAPI backend)
+**Project Type**: Web application (frontend + backend)
+**Performance Goals**: <1s response time for RAG queries
+**Constraints**: Static site deployment on GitHub Pages, PowerShell-friendly paths, no content hallucinations
+**Scale/Scope**: Medium-sized project including a 4-module, 13-week textbook and an integrated RAG chatbot.
 
 ## Constitution Check
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-- [ ] **Accuracy**: Does the plan ensure content strictly reflects user-provided materials?
-- [ ] **Clarity**: Is the proposed solution designed to be accessible to learners?
-- [ ] **Reproducibility**: Does the plan rely on workflows that are repeatable with Spec-Kit Plus and Claude Code?
-- [ ] **Consistency**: Does the plan enforce uniform structure, formatting, and terminology?
-- [ ] **Source-Grounded Reasoning**: Does the plan prevent hallucinations and ensure claims stem from provided sources?
-- [ ] **Docusaurus-Compatibility**: Is the output guaranteed to be Docusaurus-compliant Markdown?
-- [ ] **Static Deployment**: Does the architecture support static deployment on GitHub Pages?
-- [ ] **PowerShell Compatibility**: Are all paths and scripts PowerShell-compatible?
+- [x] **Accuracy**: Does the plan ensure content strictly reflects user-provided materials?
+- [x] **Clarity**: Is the proposed solution designed to be accessible to learners?
+- [x] **Reproducibility**: Does the plan rely on workflows that are repeatable with Spec-Kit Plus and Claude Code?
+- [x] **Consistency**: Does the plan enforce uniform structure, formatting, and terminology?
+- [x] **Source-Grounded Reasoning**: Does the plan prevent hallucinations and ensure claims stem from provided sources?
+- [x] **Docusaurus-Compatibility**: Is the output guaranteed to be Docusaurus-compliant Markdown?
+- [x] **Static Deployment**: Does the architecture support static deployment on GitHub Pages?
+- [x] **PowerShell Compatibility**: Are all paths and scripts PowerShell-compatible?
 
 ## Project Structure
 
