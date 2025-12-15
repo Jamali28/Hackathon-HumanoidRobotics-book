@@ -11,6 +11,11 @@
   }
 }
 
+.heroContent {
+  position: relative;
+  z-index: 2; /* Ensure content is above any potential overlay */
+}
+
 .buttons {
   display: flex;
   align-items: center;

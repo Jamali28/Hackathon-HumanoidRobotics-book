@@ -12,7 +12,7 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <header className={styles.heroBanner}>
-      <div className="container">
+      <div className={clsx("container", styles.heroContent)}>
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">Bridging the Digital Brain and the Physical Body: AI Systems in the Physical World & Embodied Intelligence</p>
         <div className={styles.buttons}>

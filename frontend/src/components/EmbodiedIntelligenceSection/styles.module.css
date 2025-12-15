@@ -1,8 +1,11 @@
 .embodiedIntelligenceSection {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background-color: var(--ifm-color-emphasis-100);
-  color: var(--ifm-hero-text-color);
+  background-color: #2e3440; /* A darker, clean shade */
+  color: #d8dee9; /* A lighter text color for contrast */
+  border-top: 1px solid #4c566a;
+  border-bottom: 1px solid #4c566a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }

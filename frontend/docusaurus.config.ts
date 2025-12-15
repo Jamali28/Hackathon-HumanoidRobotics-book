@@ -83,21 +83,20 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    navbar: {
-      title: 'Physical AI',
-      logo: {
-        alt: 'Physical AI Logo',
-        src: 'img/logo.svg',
-      },
-      items: [
-        {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
-          position: 'left',
-          label: 'Modules',
-          to: '/docs/modules/module-1', // Link to the first module
-        },
-        {to: '/blog', label: 'Blog', position: 'left'},
+          navbar: {
+            title: 'Physical AI',
+            logo: {
+              alt: 'Physical AI Logo',
+              src: '/img/humanoid-logo.png',
+            },
+            items: [
+              {
+                type: 'docSidebar',
+                sidebarId: 'readingSidebar',
+                position: 'left',
+                label: 'Reading',
+                to: '/docs/introduction', // Link to the introduction
+              },        {to: '/blog', label: 'Blog', position: 'left'},
         {
           type: 'doc',
           docId: 'weeks/week01',
