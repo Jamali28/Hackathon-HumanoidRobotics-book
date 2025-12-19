@@ -1,9 +1,8 @@
 import React from 'react';
+import RAGChatWidget from './RAGChatWidget/RAGChatWidget';
 
 export default function ChatWidgetPlaceholder() {
   return (
-    <div className='chat-placeholder'>
-      <button disabled>Chatbot Placeholder</button>
-    </div>
+    <RAGChatWidget />
   );
 }
