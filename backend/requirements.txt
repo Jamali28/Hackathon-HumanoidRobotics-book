@@ -1,5 +1,13 @@
+requests
+beautifulsoup4
+PyMuPDF
+cohere
+qdrant-client
+python-dotenv
+langchain
+langchain_text_splitters
+lxml
 fastapi
 uvicorn
-qdrant-client
-psycopg2-binary
-openai
+pydantic
+google-generativeai
