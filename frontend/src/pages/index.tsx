@@ -19,6 +19,9 @@ function HomepageHeader() {
           <a className="button button--secondary button--lg" href="/docs/chapters">
             Read
           </a>
+          <a className="button button--primary button--lg margin-left--md" href="/docs/introduction">
+            Introduction to Physical AI
+          </a>
         </div>
       </div>
     </header>

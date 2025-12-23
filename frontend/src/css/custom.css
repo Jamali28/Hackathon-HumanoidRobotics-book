@@ -27,6 +27,45 @@
   --ifm-color-primary-lighter: #32d8b4;
   --ifm-color-primary-lightest: #4fddbf;
 }
+/* Navbar typography improvements */
+.navbar__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar__title {
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #2e8555 0%, #1d4ed8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+.navbar__title:hover {
+  background: linear-gradient(135deg, #21af90 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Responsive improvements for smaller screens */
+@media (max-width: 576px) {
+  .navbar__title {
+    font-size: 1.1rem;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Additional academic/professional styling */
+.navbar__inner {
+  padding: 0.75rem 1rem;
+}
+
 table { width: 100%; overflow-x: auto; }
 pre { overflow-x: auto; }
 .chat-placeholder { position: fixed; bottom: 20px; right: 20px; z-index: 9999; }

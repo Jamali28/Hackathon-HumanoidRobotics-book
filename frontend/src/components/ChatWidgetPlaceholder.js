@@ -128,7 +128,7 @@ export default function ChatWidget() {
       {isOpen ? (
         <div className="chat-widget">
           <div className="chat-header">
-            <h3>AI Assistant</h3>
+            <h3>🤖 Chatbot</h3>
             <button className="chat-close" onClick={toggleChat} aria-label="Close chat">
               ×
             </button>
@@ -136,7 +136,13 @@ export default function ChatWidget() {
           <div className="chat-messages">
             {messages.length === 0 ? (
               <div className="chat-welcome">
-                <p>Hello! I'm your AI assistant. How can I help you today?</p>
+                <p>Ask me about Physical AI & Humanoid Robotics</p>
+                <div className="suggestions">
+                  <div className="suggestion-item">• Introduction to Embodied AI</div>
+                  <div className="suggestion-item">• ROS 2 for Robotics</div>
+                  <div className="suggestion-item">• Gazebo Simulation</div>
+                  <div className="suggestion-item">• NVIDIA Isaac Platform</div>
+                </div>
               </div>
             ) : (
               messages.map((message) => (
@@ -156,7 +162,7 @@ export default function ChatWidget() {
               type="text"
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
-              placeholder="Type your message..."
+              placeholder="🤖"
               disabled={isLoading}
               className="chat-input"
             />
@@ -172,7 +178,7 @@ export default function ChatWidget() {
         </div>
       ) : (
         <button className="chat-open-button" onClick={toggleChat} aria-label="Open chat">
-          💬 Chat
+          🤖 Chatbot
         </button>
       )}
     </div>
